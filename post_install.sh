@@ -4,7 +4,10 @@
 echo "--=[iPwntU Auto Post-Install Script]=--";
 sleep(1);
 
-
+if [ `whoami` != 'root' ]; then
+echo "--=[IDIOT - RUN SCRIPT AS ROOT]=--
+exit; 
+else
 #clean and update
 echo "--=[Apt clean & update]=--";
 apt-get clean && apt-get update
@@ -67,3 +70,4 @@ echo "* vip72 info: hitemz:g0tr00t3d:67f6be255c45d73cbfac397f03a2928f";
 sleep(3);
 echo "--=[Now LETS MAKE SOME FUCKIN COIN YEWW]=--";
 Sleep(10);
+fi
