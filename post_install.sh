@@ -13,7 +13,7 @@ Sleep(3);
 #install tor,gpa,wine,bleachbit
 echo "--=[install tor, wine, gpa, bleachbit]=--";
 apt-get install tor gpa bleachbit wine
-Sleep(3)
+Sleep(3;
 
 #add wine32 arch
 echo "--=[add wine32 arch]=--";
