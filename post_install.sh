@@ -11,8 +11,8 @@ apt-get clean && apt-get update
 Sleep(3);
 
 #install tor,gpa,wine,bleachbit
-echo "--=[install tor, wine, gpa, bleachbit]=--";
-apt-get install tor gpa bleachbit wine
+echo "--=[install curl, tor, wine, gpa, bleachbit, macchanger]=--";
+apt-get install curl tor gpa bleachbit wine macchanger
 Sleep(3;
 
 #add wine32 arch
