@@ -1,19 +1,21 @@
 #!/bin/bash
 
-
+#Start up
 echo "--=[iPwntU Auto Post-Install Script]=--";
 sleep 1;
 
+#Check if userid=0 and kill if not
 if [ `whoami` != 'root' ]; then
-echo "--=[IDIOT - RUN SCRIPT AS ROOT]=--
+echo "--=[IDIOT - RUN SCRIPT AS ROOT]=--";
 exit; 
 else
+
 #clean and update
 echo "--=[Apt clean & update]=--";
 apt-get clean && apt-get update
 sleep 3;
 
-#install tor,gpa,wine,bleachbit
+#install curl, tor, gpa, wine, bleachbit, macchanger
 echo "--=[install curl, tor, wine, gpa, bleachbit, macchanger]=--";
 apt-get install curl tor gpa bleachbit wine macchanger
 sleep 3;
@@ -61,13 +63,13 @@ unzip /root/vip72/vip72.zip
 echo "--=[set wallpaper]=--";
 curl -o /root/Pictures/wallpaper.png https://raw.githubusercontent.com/Hitemz/scripts/master/wallpaper.png
 
-#add user ipwntu with default passwd g0tr00t
+#add user ipwntu
 echo "--=[adduser ipwntu]=--";
 useradd -l -m -r -s /bin/bash -u 1337 -U ipwntu
 
+#setup done
 echo "--=[Setup Install Done]=--";
-echo "* vip72 info: hitemz:g0tr00t3d:67f6be255c45d73cbfac397f03a2928f";
+echo "* vip72 info: hitemz:67f6be255c45d73cbfac397f03a2928f";
 sleep 3;
-echo "--=[Now LETS MAKE SOME FUCKIN COIN YEWW]=--";
 sleep 10;
 fi
