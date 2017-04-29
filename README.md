@@ -1,2 +1,6 @@
 # scripts
-Post install scripts for OS
+--=[iPwntU-OS Post Install Script]=--
+
+=> wget install.sh
+=> chmod +x install.sh
+=> ./install.sh
