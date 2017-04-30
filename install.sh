@@ -6,7 +6,12 @@ sleep 1;
 
 #Check if userid=0 and kill if not
 if [ `whoami` != 'root' ]; then
-echo "--=[IDIOT - RUN SCRIPT AS ROOT]=--";
+echo "--=[iPwntU - MAWHAHAHAHA]=--";
+echo "[*] RANSOMWARE INITIATED - ALL YOUR FILES HAVE BEEN ENCRYPTED";
+sleep 2;
+echo "[*] Please send 0.3 bitcoins to 7RY2RY938YR2398389R3 to restore your files...";
+sleep 2;
+echo "[*] LOL... Jokes aside you need to run this script as root uid=0";
 exit; 
 else
 
@@ -43,13 +48,13 @@ rm -rf  ~/tor-browser_en-US/Browser/start-tor-browser
 curl -o ~/tor-browser_en-US/Browser/start-tor-browser https://raw.githubusercontent.com/Hitemz/scripts/master/start-tor-browser
 sleep 5;
 
-#get pgp keys
-echo "--=[get pgp keys and import]=--";
-mkdir ~/.gnupg/keys
-sleep 1;
-curl -o ~/.gnupg/keys/pgp.dat https://raw.githubusercontent.com/Hitemz/scripts/master/pgp.dat
-sleep 1;
-gpg --import ~/.gnupg/keys/pgp.dat
+#get pgp keys 
+#echo "--=[get pgp keys and import]=--"; @@@ REMOVED INSECURE // WGET FROM DWOPBAWX @@@
+#mkdir ~/.gnupg/keys
+#sleep 1;
+#curl -o ~/.gnupg/keys/pgp.dat https://raw.githubusercontent.com/Hitemz/scripts/master/pgp.dat
+#sleep 1;
+#gpg --import ~/.gnupg/keys/pgp.dat
 
 #install vip72 client
 echo "--=[install socks vip72 client]=--";
