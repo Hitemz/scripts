@@ -16,13 +16,13 @@ apt-get clean && apt-get update
 sleep 3;
 
 #install curl, tor, gpa, wine, bleachbit, macchanger
-echo "--=[install curl, tor, wine, gpa, bleachbit, macchanger]=--";
-apt-get install curl tor gpa bleachbit wine macchanger
+echo "--=[install curl, zip, wine, gpa, tor, bleachbit, macchanger]=--";
+apt-get install -y curl zip wine gpa tor bleachbit macchanger
 sleep 3;
 
 #add wine32 arch
 echo "--=[add wine32 arch]=--";
-dpkg --add-architecture i386 && apt-get update && apt-get install wine32
+dpkg --add-architecture i386 && apt-get update && apt-get install -y wine32
 sleep 3;
 
 #install google chrome
