@@ -32,36 +32,36 @@ sleep 3;
 
 #install tor-browser
 echo "--=[install tor browser]=--";
-curl -o /opt/tor-browser-linux64-7.0a3_en-US.tar.xz https://www.torproject.org/dist/torbrowser/7.0a3/tor-browser-linux64-7.0a3_en-US.tar.xz
+curl -o ~/tor-browser-linux64-7.0a3_en-US.tar.xz https://www.torproject.org/dist/torbrowser/7.0a3/tor-browser-linux64-7.0a3_en-US.tar.xz
 sleep 3;
-tar xvJf /opt/tor-browser-linux64-7.0a3_en-US.tar.xz
+tar zxvf ~/tor-browser-linux64-7.0a3_en-US.tar.xz
 sleep 1;
 
 #change no run as root in tor browser
 echo "--=[enable tor-browser run as root]=--";
-rm -rf  /opt/tor-browser_en-US/Browser/start-tor-browser
-curl -o /opt/tor-browser_en-US/Browser/start-tor-browser https://raw.githubusercontent.com/Hitemz/scripts/master/start-tor-browser
+rm -rf  ~/tor-browser_en-US/Browser/start-tor-browser
+curl -o ~/tor-browser_en-US/Browser/start-tor-browser https://raw.githubusercontent.com/Hitemz/scripts/master/start-tor-browser
 sleep 5;
 
 #get pgp keys
 echo "--=[get pgp keys and import]=--";
-mkdir /root/.gnupg/keys
+mkdir ~/.gnupg/keys
 sleep 1;
-curl -o /root/.gnupg/keys/pgp.dat https://raw.githubusercontent.com/Hitemz/scripts/master/pgp.dat
+curl -o ~/.gnupg/keys/pgp.dat https://raw.githubusercontent.com/Hitemz/scripts/master/pgp.dat
 sleep 1;
-gpg --import /root/.gnupg/keys/pgp.dat
+gpg --import ~/.gnupg/keys/pgp.dat
 
 #install vip72 client
 echo "--=[install socks vip72 client]=--";
-mkdir /root/vip72
+mkdir ~/vip72
 sleep 1;
-curl -o /root/vip72/vip72.zip https://raw.githubusercontent.com/Hitemz/scripts/master/vip72socks.zip
+curl -o ~/vip72/vip72.zip https://raw.githubusercontent.com/Hitemz/scripts/master/vip72socks.zip
 sleep 2;
-unzip /root/vip72/vip72.zip
+unzip ~/vip72/vip72.zip
 
 #get wallpaper
 echo "--=[set wallpaper]=--";
-curl -o /root/Pictures/wallpaper.png https://raw.githubusercontent.com/Hitemz/scripts/master/wallpaper.png
+curl -o ~/Pictures/wallpaper.png https://raw.githubusercontent.com/Hitemz/scripts/master/wallpaper.png
 
 #add user ipwntu
 echo "--=[adduser ipwntu]=--";
